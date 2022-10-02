@@ -1,6 +1,6 @@
-package com.ash.service;
+package com.rastech.service;
 
-import com.ash.model.Message;
+import com.rastech.model.Message;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 

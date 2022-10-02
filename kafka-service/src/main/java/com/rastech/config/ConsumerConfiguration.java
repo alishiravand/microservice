@@ -1,4 +1,4 @@
-package com.ash.config;
+package com.rastech.config;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;

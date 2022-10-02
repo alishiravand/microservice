@@ -1,4 +1,4 @@
-package com.ash.config;
+package com.rastech.config;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.ash.model;
+package com.rastech.model;
 
 /**
  * @author Ali Shiravand, 9/28/22 8:51 PM

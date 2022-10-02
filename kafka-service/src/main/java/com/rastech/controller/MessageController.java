@@ -1,7 +1,7 @@
-package com.ash.controller;
+package com.rastech.controller;
 
-import com.ash.model.Message;
-import com.ash.service.MessageService;
+import com.rastech.model.Message;
+import com.rastech.service.MessageService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
