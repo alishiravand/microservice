@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: customer-application
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/customer
+    username: rastech
+    password: 1728394560
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        hbm2ddl:
+          auto: update
+    show-sql: true
