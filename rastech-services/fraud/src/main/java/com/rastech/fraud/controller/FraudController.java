@@ -15,8 +15,8 @@ import java.util.List;
 public record FraudController(FraudService fraudService) {
 
     @GetMapping(path = "{customerId}")
-    public ResponseEntity<FraudCheckHistory> store(@PathVariable Integer customerId) {
-        return ResponseEntity.ok(fraudService.store(customerId));
+    public ResponseEntity<Boolean> store(@PathVariable Integer customerId) {
+        return ResponseEntity.ok(fraudService.store(customerId).getFraudster());
     }
 
     @GetMapping
