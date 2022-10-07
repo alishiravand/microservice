@@ -16,7 +16,7 @@ public record CustomerService(CustomerRepository customerRepository, RestTemplat
     public Customer store(Customer customer) throws FraudsterException {
         Customer result = customerRepository.saveAndFlush(customer);
         boolean fraudster = Boolean.TRUE.equals(restTemplate.getForObject(
-                "http://FRAUD-APPLICATION/api/v1/fraud/{customer-id}",
+                "http://FRAUD-SERVICE/api/v1/fraud/{customer-id}",
                 Boolean.class,
                 customer.getId()));
         if (fraudster)

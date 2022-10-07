@@ -11,13 +11,13 @@ zuul:
   prefix: /api/v1/rastech
   routes:
     customer:
-      path: /customer-service/**
+      path: /customer/**
       serviceId: customer-service
     fraud:
       path: /fraud/**
       serviceId: fraud-service
     notification:
-      path: /notification-service/**
+      path: /notification/**
       serviceId: notification-service
 
 spring:

@@ -21,15 +21,8 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
-    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
-
-    //developmentOnly 'io.netty:netty-resolver-dns-native-macos:4.1.82.Final'
-    //developmentOnly 'io.netty:netty-tcnative-boringssl-static:2.0.48.Final'
-    //developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    //implementation 'io.netty:netty-tcnative-boringssl-static:2.0.54.Final'
-    //implementation files('lib/netty-tcnative-boringssl-static-2.0.48.Final.jar')
-    //compile fileTree(dir: './libs', include: ['*.jar'])
-    implementation files('/Users/ash/Public/Projects/Ash/microservice/rastech-services/gateway/libs/netty-tcnative-boringssl-static-2.0.48.Final.jar')
+    implementation 'io.netty:netty-tcnative-boringssl-static:2.0.48.Final'
+    implementation 'io.netty:netty-resolver-dns-native-macos:4.1.70.Final:osx-aarch_64'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
