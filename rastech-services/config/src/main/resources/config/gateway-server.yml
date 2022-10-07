@@ -1,0 +1,42 @@
+server:
+  port: 8060
+  servlet:
+    context-path: /api/v1/rastech
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: customer-service
+          uri: lb://customer-service
+          predicates:
+            - Path=/api/v1/rastech/customer/**
+          filters:
+            - RewritePath=/api/v1/rastech/customer/(?<path>.*), /api/v1/rastech/customer/$\{path}
+        - id: fraud-service
+          uri: lb://fraud-service
+          predicates:
+            - Path=/api/v1/rastech/fraud-service/**
+          filters:
+            - RewritePath=/api/v1/rastech/fraud-service/(?<path>.*), /api/v1/rastech/fraud-service/$\{path}
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins:
+              - "*"
+            #              - "http://localhost:8060"
+            allowed-methods:
+              - "*"
+            allowed-headers:
+              - "*"
+            allow-credentials: false

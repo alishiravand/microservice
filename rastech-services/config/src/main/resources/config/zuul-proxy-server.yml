@@ -1,0 +1,25 @@
+server:
+  port: 8061
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+            
+zuul:
+  prefix: /api/v1/rastech
+  routes:
+    customer:
+      path: /customer-service/**
+      serviceId: customer-service
+    fraud:
+      path: /fraud/**
+      serviceId: fraud-service
+    notification:
+      path: /notification-service/**
+      serviceId: notification-service
+
+spring:
+  application:
+    name: zuul-proxy-server

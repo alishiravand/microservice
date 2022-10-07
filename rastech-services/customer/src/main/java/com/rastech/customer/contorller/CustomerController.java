@@ -12,7 +12,7 @@ import java.util.List;
  * @author Ali Shiravand, 10/2/22 9:51 PM
  */
 @RestController
-@RequestMapping("api/v1/customer")
+@RequestMapping("customer")
 public record CustomerController(CustomerService customerService) {
 
     @PostMapping
