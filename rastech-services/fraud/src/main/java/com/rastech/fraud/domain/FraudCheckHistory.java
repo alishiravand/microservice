@@ -63,4 +63,14 @@ public class FraudCheckHistory {
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
+
+    @Override
+    public String toString() {
+        return "FraudCheckHistory{" +
+                "id=" + id +
+                ", customerId=" + customerId +
+                ", isFraudster=" + isFraudster +
+                ", createdAt=" + createdAt +
+                '}';
+    }
 }

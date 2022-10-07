@@ -3,6 +3,7 @@ package com.rastech.service;
 import com.rastech.model.Message;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +15,8 @@ import java.util.List;
 public class MessageService {
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
-    public MessageService(KafkaTemplate<String, Object> kafkaTemplate) {
+    public MessageService(
+            KafkaTemplate<String, Object> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 

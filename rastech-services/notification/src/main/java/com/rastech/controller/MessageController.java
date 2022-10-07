@@ -11,7 +11,7 @@ import java.util.List;
  * @author Ali Shiravand, 9/28/22 8:45 PM
  */
 @RestController
-@RequestMapping("api/v2/message")
+@RequestMapping("api/v1/message")
 public class MessageController {
 
     public final MessageService messageService;
