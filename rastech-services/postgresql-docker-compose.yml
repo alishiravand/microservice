@@ -39,3 +39,4 @@ volumes:
   pgadmin:
 
 #docker compose up -d
+#docker compose -f postgresql-docker-compose.yml up -d
