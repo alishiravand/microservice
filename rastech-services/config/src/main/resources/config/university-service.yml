@@ -1,0 +1,24 @@
+server:
+  port: 9014
+
+spring:
+  application:
+    name: university-service
+  servlet:
+    context-path: /api/v1/rastech/university
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      username: rootuser
+      password: rootpass
+      database: rastech
+      auto-index-creation: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true

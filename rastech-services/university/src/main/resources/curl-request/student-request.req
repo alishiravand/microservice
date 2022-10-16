@@ -1,0 +1,33 @@
+for n in {1..1}; curl --header "Content-Type: application/json" --request POST --data '{
+                                                                                           "firstname": "Retha",
+                                                                                           "lastname": "Killeen",
+                                                                                           "email": "rkilleen0@mysql.com",
+                                                                                           "gender": "FEMALE",
+                                                                                           "address": {"country":"Philippines"},
+                                                                                           "favouriteSubjects": [
+                                                                                               "maths",
+                                                                                               "english",
+                                                                                               "it"
+                                                                                           ],
+                                                                                           "totalSpentInBooks": 0.00
+                                                                                       }'  http://localhost:8060/api/v1/rastech/university/student
+
+for n in {1..1}; curl --header "Content-Type: application/json" --request POST --data '{
+                                                                                           "firstname": "Ali",
+                                                                                           "lastname": "Shiravand",
+                                                                                           "email": "shiravand@gmail.com",
+                                                                                           "gender": "MALE",
+                                                                                           "address": {"country":"Iran"},
+                                                                                           "favouriteSubjects": [
+                                                                                               "maths",
+                                                                                               "english",
+                                                                                               "it"
+                                                                                           ],
+                                                                                           "totalSpentInBooks": 0.00
+                                                                                       }'  http://localhost:8060/api/v1/rastech/university/student
+
+for n in {1..1}; curl --request GET http://localhost:8060/api/v1/rastech/university/student
+
+curl --request GET http://localhost:8060/api/v1/rastech/university/student/find-by-email -F "email=shiravand@gmail.com"
+
+curl --request GET http://localhost:8060/api/v1/rastech/university/student/find-by-gender -F "gender=MALE"

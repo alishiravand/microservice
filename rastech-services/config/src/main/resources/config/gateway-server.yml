@@ -29,6 +29,12 @@ spring:
             - Path=/api/v1/rastech/fraud-service/**
           filters:
             - RewritePath=/api/v1/rastech/fraud-service/(?<path>.*), /api/v1/rastech/fraud-service/$\{path}
+        - id: university-service
+          uri: lb://university-service
+          predicates:
+            - Path=/api/v1/rastech/university/**
+          filters:
+            - RewritePath=/api/v1/rastech/university/(?<path>.*), /api/v1/rastech/university/$\{path}
       globalcors:
         cors-configurations:
           '[/**]':

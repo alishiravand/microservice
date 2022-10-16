@@ -19,6 +19,9 @@ zuul:
     notification:
       path: /notification/**
       serviceId: notification-service
+    university:
+      path: /university/**
+      serviceId: university-service
 
 spring:
   application:
