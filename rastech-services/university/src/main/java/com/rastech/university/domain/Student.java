@@ -12,7 +12,7 @@ import java.util.List;
  * @author Ali Shiravand, 10/15/22 5:48 PM
  */
 @Document
-public class Student {
+public class Student implements Cloneable{
     @Id
     private String id;
     private String firstname;
@@ -121,4 +121,14 @@ public class Student {
                 '}';
     }
 
+    @Override
+    public Student clone() {
+        try {
+            Student clone = (Student) super.clone();
+            // TODO: copy mutable state here, so the clone can't change the internals of the original
+            return clone;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
+    }
 }
