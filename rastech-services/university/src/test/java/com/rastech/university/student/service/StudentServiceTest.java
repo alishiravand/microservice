@@ -1,10 +1,11 @@
-package com.rastech.university.service;
+package com.rastech.university.student.service;
 
 import com.rastech.university.domain.Address;
 import com.rastech.university.domain.Gender;
 import com.rastech.university.domain.Student;
 import com.rastech.university.repository.NativeStudentRepository;
 import com.rastech.university.repository.StudentRepository;
+import com.rastech.university.service.StudentService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
